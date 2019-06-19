@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:svg="http://www.w3.org/2000/svg">
+{% load staticfiles %}
+{% load static %}
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <style>
+            table {
+              /*font-family: arial, sans-serif;*/
+              face: Verdana;
+              border-collapse: collapse;
+              float: left;
+              width: 300px;
+              background-color: #E0E0E0;
+              /*position: fixed;*/
+              margin-left: 40px;
+              text-align: center;
+
+            }
+            td, th {
+              border: 3px solid #dddddd;
+              text-align: center;
+              padding: 8px;
+              width: 300px;
+            }
+
+            tr:nth-child(even) {
+              background-color: white;
+            }
+
+            body {
+              font-family: Arial;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+
+            form.example input[type=text] {
+              padding: 10px;
+              font-size: 17px;
+              border: 1px solid grey;
+              float: left;
+              width: 80%;
+              background: #f1f1f1;
+            }
+
+            form.example button {
+              float: left;
+              width: 20%;
+              padding: 10px;
+              background: #2196F3;
+              color: white;
+              font-size: 17px;
+              border: 1px solid grey;
+              border-left: none;
+              cursor: pointer;
+            }
+
+            form.example button:hover {
+              background: #0b7dda;
+            }
+
+            form.example::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+        </style>
+   </head>
+
+<body bgcolor="black">
+<a href="index.html"><img src="{%  static 'images/logo2.png' %}" alt="" height="100" width="400px"/></a>
+<form class="example" method="get" action="/search_users/"style="margin:40px;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit" id="b1"><i class="fa fa-search"></i></button>
+</form>
+<table>
+<tr>
+{% for header in headers %}
+    <th>{{ header }}</th>
+{% endfor %}
+</tr>
+<tr>
+{% for value in rows %}
+    <tr><td>{{ value.name }}</td><td>{{ value.score }}</td></tr>
+{% endfor %}
+</tr>
+</table>
+
+<embed src="{%  static 'images/sjtu_follower2.svg' %}" width="500px" height="500px" align="right" margin-top="-200px" type="image/svg+xml" 
+pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+
+
+</body>
+</html>
+
+
