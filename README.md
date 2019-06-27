@@ -2,11 +2,8 @@
 
 This project is developed in Python. The architecture we used is Django.  
 
--------------------------------------
 
-**Library Dependencies**
-
--------------------------------------
+## Library Dependencies
 
 Python 3.6.8
 
@@ -16,11 +13,9 @@ Pandas 0.24.2
 
 Networkx 2.3
 
--------------------------------------
 
-**Run**
 
--------------------------------------
+## Run
 
 run code on local host
 
